@@ -1,0 +1,309 @@
+﻿- Please complete this quiz in one hour.
+- The 20 multiple answer quizzes have only ONE correct answer for a value of 1 point each. 1 point will be removed for each answer consider incorrect.
+
+- Delete from this .txt file the answers you consider wrong and leave the one correct.
+
+- There are 5 Python exercises for a value of 5 point each. You can execute these in a Jupyter Notebook, to ensure they'd run properly.
+
+- Both the Jupyter Notebook and the txt file with you answers have to be delivered as a GIT repository, via email, or
+ in a repository in a website of your choice (preferably GitHub) and again shared via email or by granting access to it to the handle: MattiaCinelli
+
+- Delivering a git repository ensure an additional 15 points.
+
+
+Question 1
+----------------
+Which command would you use to switch to an existing branch named `my_branch`?
+- git checkout my_branch
+- git checkout `my_branch`
+- git checkout -b my_branch
+- git branch `my_branch`
+
+
+Question 2
+----------------
+Which command would you use to switch to a different branch without committing your work?
+- git pop
+- git store
+- git fetch
+- git stash
+
+
+Question 3
+----------------
+After a repository is created, you have created a first file called text.txt, which of the following command will not work?
+- git commit -m 'adding first file'
+- git add .
+- git status
+- git add text.txt
+
+
+Question 4
+----------------
+You accidentally stage a tracked file for commit using `git add file.txt`. How do you undo this without untracking the file?
+- git unstage file.txt
+- git rm file.txt
+- git remove file.txt
+- git reset file.txt
+
+
+Question 5
+----------------
+You want to integrate the changes from a single, specific commit (from another branch) into your current branch. The commit�s hash is af02e0b. Which command should you use?
+
+- `git cherry-pick af02e0b`
+- `git pick af02e0b`
+- `git merge af02e0b`
+- `git merge-single af02e0b`
+
+
+Question 6
+----------------
+Find the slowest time complexity
+
+- (n)
+- (n!)
+- (2^n)
+- (n^2)
+
+
+Question 7
+----------------
+Which Big-O notation usually refers to a nested loop?
+- (1)
+- (2^n)
+- (n)
+- (n^2)
+
+
+Question 8
+----------------
+Which big O notation most accurately describes the speed of the following code?
+    list1 = [1,2,3,4,5]
+    list2 = [2,3,4,5,6]
+    sums = []
+    for num1 in list1:
+        for num2 in list2:
+            sums.append(num1 + num2)
+
+- O(1)
+- O(n^2)
+- O(n)
+- O(2^n)
+
+
+Question 9
+----------------
+What terminology best describe when the number of executions grows extremely quickly as the size of the input increases?
+- Polynomial Time
+- Constant Time
+- Linear Time
+- Exponential Time
+
+
+Question 10
+----------------
+When is preferable to use cross-validation respect to one time division in test/training/(validation) set:
+- For small databases
+- For large databases
+
+
+Question 11
+----------------
+The mass of 1000kg of potatoes is initially found to be 99% made up of water. 
+A week later, due to evaporation, the potatoes' mass is 98% made up of water. 
+What is the new mass of the potatoes?
+- 250kg
+- 500kg
+- 750kg
+- 990kg
+
+
+Question 12
+----------------
+What is the result of print(tuple[0]) if tuple = ('a', 5 , 7.4, 'icecream', 7.4)?
+- a
+- ('a', 5 , 7.4, 'icecream', 7.4 )
+- Error
+- None of the above
+
+
+Question 13
+----------------
+What is 'with' statement in python?
+- It is a logic gate (like and, or, not) that carries two statement regardless that if they are true or false.
+- If it is associated with the statement 'as' it allows to handle any kind of files.
+- It is a context manager that opens files and keeps them on hand for use throughout the code.
+- It is a context manager that will create a context in which manage resources.
+
+
+Question 14
+----------------
+Which single pandas method can you use to get a summary of various dataframe information, 
+including index start/end/length, column names/types/non-null counts, and memory usage?
+
+- df.summary()
+- df.info()
+- df.overview()
+- df.summarize()
+
+
+Question 15
+----------------
+Which command returns all entries when there is a match in either left or right table?
+
+- (INNER) JOIN
+- FULL (OUTER) JOIN
+- RIGHT (OUTER) JOIN
+- LEFT (OUTER) JOIN
+
+
+Question 16
+----------------
+What is a foreign key?
+- A column(s) in SQL that works as link between data in two tables
+- A index(s) in SQL that works as link between data in two tables
+- None of the answers
+- A SQL command
+
+
+Question 17
+----------------
+A sql database called CITIES containing the following columns 'NAME', 'POPULATION' and 'NATION', write a query that obtains all cities from the country 'UK'
+
+
+Question 18
+----------------
+Which of the following is a valid metric for computing the entropy in a classification decision tree?
+- Jaccard index
+- Entropy index
+- Gini impurity
+- Pearson coefficient
+
+
+Question 19
+----------------
+Write a SQL query to find all duplicate entries in a table named GuestList.
++----+---------+
+| Id | NAME    |
++----+---------+
+| 1  | Jack    |
+| 2  | Mary    |
+| 3  | Jack    |
++----+---------+
+
+
+Question 20
+----------------
+What is an F1 Score?
+- The average of recall and specificity
+- The harmonic mean of precision and recall
+- The harmonic average of sensitivity and recall
+- None of the answers
+
+
+Exercise 1
+----------------
+Given dataframe 1 and 2, produce dataframe 3.
+    from numpy.core.numeric import NaN
+    import pandas as pd
+
+    df1 = pd.DataFrame({
+        'Date': ['01/01/2021', '02/01/2021', '03/01/2021'],
+        'A': [1, 4, 7], 
+        'B': [2, 5, 8],
+        'C': [3, 6, 9]
+        })
+
+    df2 = pd.DataFrame({
+        'Date': ['03/01/2021', '04/01/2021', '05/01/2021'],
+        'C': [4, 6, 8], 
+        'D': [5, 7, 9]
+        })
+
+    df3 = pd.DataFrame({
+        'Date': ['01/01/2021', '02/01/2021', '03/01/2021', '04/01/2021', ''],
+        'A': [1, 4, 7, NaN, NaN],
+        'B': [2, 5, 8, NaN, NaN],
+        'C': [3, 6, 4, 6, 8],
+        'D': [NaN, NaN, 5, 7, 9]
+        })
+
+
+Exercise 2
+----------------
+Complete a function to compute whether two lists of strings represent the same concatenated string, 
+such that the assert statements will successfully pass. This should only require a few lines of code. An explanation is given in the function docstring.
+
+    def are_concatenated_strings_equal(word1, word2):
+        '''
+        Given two string arrays word1 and word2, this function should returns true
+        if the two arrays represent the same string, and false otherwise.
+        A string is represented by an array if the array elements concatenated
+        in order form the string.
+
+        Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
+        Output: true
+        Explanation:
+        word1 represents string "ab" + "c" -> "abc"
+        word2 represents string "a" + "bc" -> "abc"
+        The strings are the same, so return true.
+        '''
+        ## Replace pass statement with your code below
+        pass
+        ##
+
+    assert are_concatenated_strings_equal(word1=["a", "cb"], word2=["ab", "c"]) is False
+    assert are_concatenated_strings_equal(word1=["abc", "d", "defg"], word2=["abcddefg"])
+
+
+Exercise 3
+----------------
+A file contains 2 columns of semicolon-separated data representing bets on horses. 
+Column 1 has the name of a horse, and column 2 the amount bet on it.
+There may be multiple bets on each horse. Write a script to calculate the total amount bet on each horse.
+    Text.txt:
+    fred;230
+    betty;40
+    henry;50
+    fred;30
+
+
+Exercise 4
+----------------
+Complete a function to compute the running sum of a list, such that the assert statements will successfully pass. This should only require a few lines of code. An explanation is given in the function docstring.
+    def running_sum(nums):
+        '''
+        This function should compute and return a list containing the running sum of nums (i.e., the sum so far at each element as you iterate through nums).
+        Example:
+        Input: nums = [1,3,5,7]
+        Output: [1,4,9,16]
+        Explanation: Running sum is obtained as follows: [1, 1+3, 1+3+5, 1+3+5+7].
+        '''
+        # Replace the pass statement with your code
+        pass
+        #
+
+    assert running_sum(nums=[1,1,1,1,1]) == [1,2,3,4,5]
+    assert running_sum(nums=[3,1,2,10,1]) == [3,4,6,16,17]
+
+
+Exercise 5
+----------------
+Given the following pandas dataframe, return Ben's age.
+    from numpy.core.numeric import NaN
+    import pandas as pd
+
+    df = pd.DataFrame({
+        'Name': ['Alex', 'Ben', 'Calvin', 'David'], 
+        'Age':  [10, 20, 30, NaN],
+        'Height': [120.0, NaN, 170.8, NaN]
+        })
+
+
+Bonus Exercise (5 points)
+----------------
+Write a script to implement the game "Chip Chop". Counting from 1 to 100, print each number in turn, on a new line. BUT... 
+ - If the number is divisible by 3, or contains a digit 3, print "Chip" instead of the number.
+ - Similarly, for 5s, print "Chop".
+ - If both the "3" and "5" conditions, "Chip Chop
